@@ -209,5 +209,6 @@ def test(datalist):
 
 
 if __name__ == '__main__':
-    main()
+    # main()
     # init_db("BossData.db")
+    getHTML()

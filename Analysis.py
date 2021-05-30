@@ -2,9 +2,7 @@ import pandas as pd
 from pyecharts.charts import Bar
 from pyecharts import options as opts
 from pyecharts.charts import Pie
-from pyecharts.faker import Faker
 from pyecharts.charts import WordCloud
-from pyecharts.globals import SymbolType
 from pyecharts.charts import Map
 
 def main():
@@ -34,11 +32,6 @@ def draw(data):
     for j in [y1,y2,y3,y4]:
         for i in range(len(j)):
             j[i] = round(j[i],1)
-
-    # print(x)
-    # print(y1)
-    # print(y2)
-    # print(y3)
 
 
     bar = Bar()
