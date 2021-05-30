@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>北京市大数据招聘信息数据分析</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="static/assets/img/favicon.png" rel="icon">
+    <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="container">
+
+        <div class="logo float-left">
+            <h1 class="text-light"><a href="index.html"><span>北京市大数据岗位招聘数据分析</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu float-right d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="#header">主页 <i class="la la-angle-down"></i></a></li>
+                <li><a href="#about">关于项目</a></li>
+                <!--<li><a href="#portfolio">大数据岗位地区分布</a></li>-->
+                <!--<li><a href="#portfolio">Portfolio</a></li>-->
+                <!--<li><a href="#team">Team</a></li>-->
+                <li><a href="https://www.cnblogs.com/13roky/">博客</a></li>
+
+                <li class="drop-down"><a href="">目录</a>
+                    <ul>
+                        <li><a href="#wordcloud">大数据岗位词云</a></li>
+                        <!--<li class="drop-down"><a href="#">Drop Down 2</a>-->
+                        <!--    <ul>-->
+                        <!--        <li><a href="#">Deep Drop Down 1</a></li>-->
+                        <!--        <li><a href="#">Deep Drop Down 2</a></li>-->
+                        <!--        <li><a href="#">Deep Drop Down 3</a></li>-->
+                        <!--        <li><a href="#">Deep Drop Down 4</a></li>-->
+                        <!--        <li><a href="#">Deep Drop Down 5</a></li>-->
+                        <!--    </ul>-->
+                        <!--</li>-->
+                        <li><a href="#area">大数据岗位地区分布</a></li>
+                        <li><a href="#jobSum">大数据岗位地区分布</a></li>
+                        <li><a href="#salaryMess">大数据薪资情况</a></li>
+                        <li><a href="#yearSalary">大数据年薪情况</a></li>
+                        <li><a href="#degree">学历要求</a></li>
+                        <li><a href="#degree-salary">学历和薪资关系</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/13roky">Github</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url('static/assets/img/slide/slide-1.jpg');">
+                    <div class="carousel-container">
+                        <div class="carousel-content container">
+                            <h2 class="animated fadeInDown">北京市大数据岗位招聘数据分析 <span></span></h2>
+                            <p class="animated fadeInUp">本项目的数据均来源于Boss直聘网站. 通过对Boss直聘大数据招聘信息进行数据爬取, 并对所爬取到的数据进行分析.</p>
+                            <a href="#about" class="btn-get-started animated fadeInUp scrollto">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= About Us Section 统计信息 ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row no-gutters">
+                <div class="col-lg-6 video-box">
+                    <img src="static/assets/img/about.jpg" class="img-fluid" alt="">
+                               <!--<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>-->
+                </div>
+
+                <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+                    <div class="section-title">
+                        <h2>关于项目</h2>
+                        <p>本项目集合了爬虫, 数据分析, 数据可视化, 静态网页多种实现手段</p>
+                        <p>爬虫部分, 本项目的数据均爬自Boss直聘网站</p>
+                        <p>数据分析部分, 本项目将爬取到的数据做简单的数据分析</p>
+                        <p>数据可视化部分, 本项目将分析得到的数据, 利用开源项目pyecharts, 进行数据可视化</p>
+                        <p>静态网页部分, 本项目将部分数据导入SQLiet以供静态网站读取, 并将数据可视化部分得到的图表在静态网页进行展示, 最后利用github page项目将静态网页映射到公网</p>
+                        <p>-</p>
+                        <p>本项目所有源码均已在 Github 进行开源</p>
+                    </div>
+
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                      <!--<div class="icon"><i class="bx bx-fingerprint"></i></div>-->
+                        <h5 class="title"><a href="https://github.com">进入项目仓库查看详情</a></h5>
+                                     <!--<p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>-->
+                    </div>
+
+                               <!--<div class="icon-box" data-aos="fade-up" data-aos-delay="100">-->
+                               <!--  <div class="icon"><i class="bx bx-gift"></i></div>-->
+                               <!--  <h4 class="title"><a href="">Nemo Enim</a></h4>-->
+                               <!--  <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>-->
+                               <!--</div>-->
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Us Section -->
+
+    <!--<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" title="网站模板">网站模板</a></div>-->
+
+    <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+                    <div class="count-box">
+                        <!--<i class="icofont-simple-smile" style="color: #20b38e;"></i>-->
+                        <svg t="1622358638123" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1223" data-spm-anchor-id="a313x.7781069.0.i0" width="100" height="100"><path d="M682.666667 420.977778m-28.444445 0a28.444444 28.444444 0 1 0 56.888889 0 28.444444 28.444444 0 1 0-56.888889 0Z" p-id="1224"></path><path d="M682.666667 599.22963m-28.444445 0a28.444444 28.444444 0 1 0 56.888889 0 28.444444 28.444444 0 1 0-56.888889 0Z" p-id="1225"></path><path d="M682.666667 770.844444m-28.444445 0a28.444444 28.444444 0 1 0 56.888889 0 28.444444 28.444444 0 1 0-56.888889 0Z" p-id="1226"></path><path d="M511.905185 361.054815c-82.488889 0-160.426667-10.24-219.306666-28.918519-85.143704-26.927407-103.063704-62.577778-103.063704-87.703703s17.92-60.681481 103.063704-87.703704c58.88-18.583704 136.722963-28.918519 219.306666-28.918519s160.426667 10.24 219.306667 28.918519c85.143704 26.927407 103.063704 62.577778 103.063704 87.703704s-17.92 60.681481-103.063704 87.703703c-58.88 18.678519-136.817778 28.918519-219.306667 28.918519z m0-190.388148c-78.317037 0-151.608889 9.576296-206.411852 26.927407-50.346667 15.928889-73.291852 35.555556-73.291852 46.933333s22.945185 31.099259 73.291852 46.933334c54.802963 17.351111 128.18963 26.927407 206.411852 26.927407s151.608889-9.576296 206.411852-26.927407c50.346667-15.928889 73.291852-35.555556 73.291852-46.933334s-22.945185-31.099259-73.291852-46.933333C663.514074 180.242963 590.127407 170.666667 511.905185 170.666667zM511.905185 721.351111c-82.488889 0-160.426667-10.24-219.306666-28.918518-85.143704-26.927407-103.063704-62.577778-103.063704-87.703704h42.666666c0 11.472593 22.945185 31.099259 73.291852 46.933333 54.802963 17.351111 128.18963 26.927407 206.411852 26.927408s151.608889-9.576296 206.411852-26.927408c50.346667-15.928889 73.291852-35.555556 73.291852-46.933333h42.666667c0 25.125926-17.92 60.681481-103.063704 87.703704-58.88 18.678519-136.817778 28.918519-219.306667 28.918518zM511.905185 546.797037c-82.488889 0-160.426667-10.24-219.306666-28.918518-85.143704-26.927407-103.063704-62.577778-103.063704-87.703704h42.666666c0 11.472593 22.945185 31.099259 73.291852 46.933333 54.802963 17.351111 128.18963 26.927407 206.411852 26.927408 78.317037 0 151.608889-9.576296 206.411852-26.927408 50.346667-15.928889 73.291852-35.555556 73.291852-46.933333h42.666667c0 25.125926-17.92 60.681481-103.063704 87.703704-58.88 18.678519-136.817778 28.918519-219.306667 28.918518zM511.905185 896c-82.488889 0-160.426667-10.24-219.306666-28.918519-85.143704-26.927407-103.063704-62.577778-103.063704-87.703703h42.666666c0 11.472593 22.945185 31.099259 73.291852 46.933333C360.296296 843.757037 433.588148 853.333333 511.905185 853.333333s151.608889-9.576296 206.411852-26.927407c50.346667-15.928889 73.291852-35.555556 73.291852-46.933333h42.666667c0 25.125926-17.92 60.681481-103.063704 87.703703-58.88 18.583704-136.817778 28.823704-219.306667 28.823704z" p-id="1227"></path><path d="M189.534815 244.527407h42.666666v534.945186h-42.666666z" p-id="1228"></path><path d="M791.608889 244.527407h42.666667v534.945186h-42.666667z" p-id="1229"></path></svg>
+                        <span data-toggle="counter-up">178</span>
+                        <p>数据量</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="count-box">
+                        <!--<i class="icofont-document-folder" style="color: #c042ff;"></i>-->
+                        <svg t="1622358728994" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2164" width="100" height="100"><path d="M366.08 359.424c-9.728-75.264-10.752-144.896-0.512-207.36 136.192-92.672 200.704 16.384 304.64 0 8.192 65.024 5.12 152.576-4.608 204.288-6.144 34.304-20.48 65.024-40.448 89.6-28.16 34.304-66.56 55.808-109.568 55.808-43.008 0-81.92-21.504-109.568-55.808-19.456-23.552-33.28-53.248-39.936-86.528z m-68.608 588.8h449.536l-26.624 38.912H319.488l-22.016-38.912z m473.6-334.848l49.664 188.416c17.408 66.048 9.216 113.152-67.072 113.152h-16.896v-259.072h-201.728l57.856-133.12 20.992-16.384 113.664 28.16 5.632 1.536 3.584 4.608c16.896 22.016 27.648 46.592 33.28 73.216l1.024-0.512z m-460.288 301.568h-30.72c-75.776 0-83.968-47.104-67.072-113.152l49.664-188.416c6.656-31.232 20.992-55.808 41.472-74.752l3.072-2.56 4.096-1.024L420.864 506.88l21.504 16.384 62.976 133.12h-194.56v258.56z" fill="#231815" p-id="2165"></path></svg>
+                        <span data-toggle="counter-up">69</span>
+                        <p>岗位类型</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="count-box">
+                        <!--<i class="icofont-live-support" style="color: #46d1ff;"></i>-->
+                        <svg t="1622358770896" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3815" width="100" height="100"><path d="M 883.8 521.2 c -15.2 -57.4 -41.4 -116 -119 -122.2 c 3.5 -12.7 6.3 -25.4 8 -38 c 12 -86.7 -6.4 -160.8 -53.1 -214.4 C 672.6 92.5 600.8 64 512 64 c -88.4 0 -160.1 28.4 -207.1 82.1 c -46.9 53.5 -65.5 127.7 -53.8 214.7 c 1.8 13.4 4.8 26.8 8.5 40.3 c -58.7 11 -104.2 56 -119.6 120.5 L 64 820.1 v 5.6 c 0 74 60.3 134.3 134.4 134.3 h 627.2 c 74.1 0 134.4 -60.2 134.4 -134.3 v -5.6 l -76.2 -298.9 Z M 372.4 205 c 29.5 -33.7 77.8 -51.5 139.6 -51.5 c 62.1 0 110.6 17.9 140.2 51.9 c 29.2 33.5 40.3 83.1 31.9 143.4 C 669.7 453.1 564.8 573 511.9 627.6 C 459 573 353.8 453.1 339.9 348.9 c -8.1 -60.6 3.1 -110.4 32.5 -143.9 Z m 453.2 665.5 H 198.4 c -23.1 0 -42.2 -17.6 -44.6 -40.1 L 227.1 543 c 8.3 -35 30.5 -55.1 60.9 -55.1 h 7.1 c 66.1 124.8 180.3 229.9 186.7 235.7 l 30.2 27.5 l 30.2 -27.6 c 6.4 -5.8 120.2 -110.9 186.3 -235.6 h 22.4 c 19.6 0 31.5 0 46.2 55.8 l 73 286.7 c -2.3 22.5 -21.4 40.1 -44.5 40.1 Z" fill="" p-id="3816"></path><path d="M 512.1 459.5 c 74.2 0 134.6 -60.3 134.6 -134.4 s -60.4 -134.4 -134.6 -134.4 S 377.5 250.9 377.5 325 s 60.4 134.5 134.6 134.5 Z m 0 -179.4 c 24.8 0 45 20.2 45 44.9 s -20.2 44.9 -45 44.9 s -45 -20.2 -45 -44.9 s 20.2 -44.9 45 -44.9 Z" fill="" p-id="3817"></path></svg>
+                        <span data-toggle="counter-up">8</span>
+                        <p>岗位地区数量</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="count-box">
+                        <!--<i class="icofont-users-alt-5" style="color: #ffb459;"></i>-->
+                        <!--<img src="static/assets/img/about.jpg" class="img-fluid" alt="">-->
+                        <svg t="1622358825360" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4210" width="100" height="100"><path d="M487.947 191.383c95.178-95.177 249.492-95.177 344.67 0 94.226 94.227 95.168 246.412 2.826 341.797l-2.826 2.873-296.564 296.564c-95.178 95.177-249.492 95.177-344.67 0-95.177-95.178-95.177-249.492 0-344.67l99.473-99.473c12.497-12.497 32.758-12.497 45.255 0s12.497 32.758 0 45.255l-99.473 99.473c-70.184 70.184-70.184 183.975 0 254.16 69.483 69.482 181.705 70.177 252.042 2.084l2.118-2.084 296.564-296.564c70.184-70.184 70.184-183.975 0-254.16-69.483-69.482-181.705-70.177-252.042-2.084l-2.118 2.084-9.563 9.563c-12.497 12.497-32.758 12.497-45.255 0-12.372-12.372-12.495-32.354-0.37-44.878l0.37-0.377 9.563-9.563zM298.053 381.026c56.035-56.035 146.886-56.035 202.92 0 55.475 55.475 56.03 145.072 1.665 201.23l-1.664 1.69-79.68 79.681c-12.498 12.497-32.759 12.497-45.256 0-12.371-12.371-12.495-32.353-0.37-44.877l0.37-0.377 79.68-79.681c31.042-31.041 31.042-81.37 0-112.41-30.73-30.732-80.364-31.04-111.473-0.923l-0.937 0.922-79.68 79.68c-12.497 12.497-32.759 12.497-45.255 0C206 493.59 205.877 473.609 218 461.085l0.372-0.377 79.68-79.68z" fill="#333333" p-id="4211"></path></svg>
+                        <span data-toggle="counter-up">1</span>
+                        <p>数据来源</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Counts Section -->
+
+    <
+
+    <!-- ======= Our Portfolio Section 展示======= -->
+    <section id="wordcloud" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="section-title">
+                <h2>大数据相关岗位词云</h2>
+                <p>文本介绍</p>
+            </div>
+            <div id="tab_1">
+                <iframe src="static/charts/大数据岗位词云.html"
+                        height="500"
+                        width="1200"
+                        frameborder="0"
+                        scrolling="no"
+                ></iframe>
+            </div>
+
+        </div>
+    </section><!-- End Our Portfolio Section -->
+
+    <section id="area" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="section-title">
+                <h2>大数据岗位地区分布</h2>
+                <p>文本介绍</p>
+            </div>
+            <div id="tab_1">
+                <iframe src="static/charts/大数据岗位地区分布.html"
+                        height="500"
+                        width="1200"
+                        frameborder="0"
+                        scrolling="no"
+                ></iframe>
+            </div>
+
+        </div>
+    </section><!-- End Our Portfolio Section -->
+
+
+    <section id="jobSum" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="section-title">
+                <h2>大数据岗位地区分布</h2>
+                <p>文本介绍</p>
+            </div>
+            <div id="tab_1">
+                <iframe src="static/charts/各区域工作数量.html"
+                        height="500"
+                        width="1200"
+                        frameborder="0"
+                        scrolling="no"
+                ></iframe>
+            </div>
+
+        </div>
+    </section><!-- End Our Portfolio Section -->
+
+    <section id="salaryMess" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="section-title">
+                <h2>大数据薪资情况</h2>
+                <p>文本介绍</p>
+            </div>
+            <div id="tab_1">
+                <iframe src="static/charts/各城市工资.html"
+                        height="500"
+                        width="1200"
+                        frameborder="0"
+                        scrolling="no"
+                ></iframe>
+            </div>
+
+        </div>
+    </section><!-- End Our Portfolio Section -->
+
+
+    <section id="yearSalary" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="section-title">
+                <h2>大数据年薪情况</h2>
+                <p>文本介绍</p>
+            </div>
+            <div id="tab_1">
+                <iframe src="static/charts/平均年薪.html"
+                        height="500"
+                        width="1200"
+                        frameborder="0"
+                        scrolling="no"
+                ></iframe>
+            </div>
+
+        </div>
+    </section><!-- End Our Portfolio Section -->
+
+
+    <section id="degree" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="section-title">
+                <h2>学历要求</h2>
+                <p>文本介绍</p>
+            </div>
+            <div id="tab_1">
+                <iframe src="static/charts/要求学历数量.html"
+                        height="500"
+                        width="1200"
+                        frameborder="0"
+                        scrolling="no"
+                ></iframe>
+            </div>
+
+        </div>
+    </section><!-- End Our Portfolio Section -->
+
+    <section id="degree-salary" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="section-title">
+                <h2>学历和薪资关系</h2>
+                <p>文本介绍</p>
+            </div>
+            <div id="tab_1">
+                <iframe src="static/charts/各学历工资状况.html"
+                        height="500"
+                        width="1200"
+                        frameborder="0"
+                        scrolling="no"
+                ></iframe>
+            </div>
+
+        </div>
+    </section><!-- End Our Portfolio Section -->
+
+
+
+</main><!-- End #main -->
+
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="static/assets/vendor/jquery/jquery.min.js"></script>
+<script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="static/assets/vendor/php-email-form/validate.js"></script>
+<script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+<script src="static/assets/vendor/venobox/venobox.min.js"></script>
+<script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="static/assets/vendor/counterup/counterup.min.js"></script>
+<script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="static/assets/vendor/aos/aos.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/assets/js/main.js"></script>
+
+<style>
+    .copyrights {
+        text-indent: -9999px;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+    }
+</style>
+<!---->
+</body>
+
+</html>
