@@ -10,7 +10,7 @@
     用 于 展 示 项 目 最 终 成 果 
   </p> 
   <p align="center">
-    <a href="https://13roky.github.io/BossZhipinSpider" target="_blank">Github演示点</a> | 
+    <a href="https://brokyz.github.io/BossZhipinSpider" target="_blank">Github演示点</a> | 
     <a href="https://13roky.github.io/BossZhipinSpider" target="_blank">Gitee演示点</a>
 </div>
 
